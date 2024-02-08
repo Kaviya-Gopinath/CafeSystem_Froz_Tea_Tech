@@ -1,0 +1,44 @@
+<mat-toolbar class="mat-elevation-z8">
+   
+     <div class="logo" style="font-size: larger; font-weight: bold; color: green;">
+     
+     <img src="assets/images/newlogo.jpg" alt="Logo" class="img-responsive">
+     FrozTeaTech
+
+     </div>
+   
+    <div class="spacer"></div>
+     <a mat-button style="margin-right: 10px; background-color: rgb(55, 206, 214);" routerLink="/customer/home">Home</a>
+     <a mat-button style="margin-right: 10px; background-color: rgb(55, 206, 214);" routerLink="/customer/myprofile">My Profile</a>
+     <a mat-button style="margin-right: 10px; background-color: rgb(55, 206, 214);" routerLink="/customer/menu">Menu</a>
+     <a mat-button style="margin-right: 10px; background-color: rgb(55, 206, 214);"  routerLink="/customer/myorders">My Orders</a>
+     <a mat-button  style="margin-right: 10px; background-color: rgb(55, 206, 214);" routerLink="/customer/mypayment">My Payments</a>
+     <a mat-raised-button color="accent" (click)="logout()" style="background-color: red;">Logout</a>
+    
+    
+       </mat-toolbar>
+       <div class="main-content" style="
+       background-image: url('assets/images/custom4.avif');
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-attachment:fixed;
+       height:200vh">
+        <div class="section-content section-content-p30">
+            <div class="container-fluid">  
+                    <div class="col-md-9">
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-md-4" *ngFor="let tempmenu of menu">
+                                    <div class="menu-container" >
+                                        <img src="{{ tempmenu.img }}" alt="{{ tempmenu.fname }}" class="menu-image">
+                                        <h4 class="menu-item" >{{ tempmenu.fname }}</h4>
+                                        <p class="menu-price">{{ tempmenu.price }} ₹</p>
+                                        <button class="atu-btn-submit" (click)="orderMenu(tempmenu.item_id)">Order</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>

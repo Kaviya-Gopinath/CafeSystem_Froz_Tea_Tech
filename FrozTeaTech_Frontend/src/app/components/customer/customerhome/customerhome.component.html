@@ -1,0 +1,130 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+<mat-toolbar class="mat-elevation-z8">
+  <div class="logo" style="font-size: larger; font-weight: bold; color: green;">
+  
+      <img src="assets/images/newlogo.jpg" alt="Logo" class="img-responsive">
+      FrozTeaTech
+ 
+  </div>
+  
+      
+     
+       <div class="spacer"></div>
+      <a mat-button style="margin-right: 10px; background-color: rgb(55, 206, 214);" routerLink="/customer/home">Home</a>
+      <a mat-button style="margin-right: 10px; background-color: rgb(55, 206, 214);" routerLink="/customer/myprofile">My Profile</a>
+      <a mat-button style="margin-right: 10px; background-color: rgb(55, 206, 214);" routerLink="/customer/menu">Menu</a>
+      <a mat-button style="margin-right: 10px; background-color: rgb(55, 206, 214);"  routerLink="/customer/myorders">My Orders</a>
+      <a mat-button  style="margin-right: 10px; background-color: rgb(55, 206, 214);" routerLink="/customer/mypayment">My Payments</a>
+      <a mat-raised-button color="accent" (click)="logout()" style="background-color: red;">Logout</a>
+     </mat-toolbar>
+   
+
+    <div style="
+    background-image: url('assets/images/custom3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+   "> <div class="title_text" style="margin-bottom: 1%; ">
+      <h1 style="font-family:Arial, Helvetica, sans-serif; color: white; font-weight: bold;">Welcome <strong>{{customer.customerName}}</strong></h1>
+      <br>
+      <h2 style="font-weight: bold; font-family:Arial, Helvetica, sans-serif; color: white;">Select Services</h2>
+      <!-- <p></p> -->
+    </div>
+      <div class="row">
+        <div class="column" style="margin-left: 15%; margin-right: 30px;">
+          <div class="container2" id="image1">
+            <a routerLink="/customer/menu" style="text-decoration: none; color: inherit;">
+              <img src="assets/images/menu1.jpg" >
+              <div class="overlay">
+                <div class="text1">
+                  <p >Click for Menu <span id="total_oldsoe"></span></p>
+                  
+                </div>
+              </div>
+              <!-- <div class="text">
+                <p>Menu</p>
+              </div> -->
+            </a>
+          </div>
+        </div>
+
+        <div class="column" style="margin-left: 30px; margin-right: 15%;">
+          <div class="container2" id="image2">
+            <a routerLink="/customer/myorders" style="text-decoration: none; color: inherit;">
+              <img src="assets/images/myorders.jpg" >
+              <div class="overlay">
+                <div class="text1">
+                  <p>View Orders <span id="total"></span></p>
+                 
+                </div>
+              </div>
+              <!-- <div class="text">
+                <p>Orders</p>
+              </div> -->
+            </a>
+          </div>
+        </div>
+
+       
+        
+      </div>
+    </div>
+
+  <!-- <section id="footer" style="margin-bottom: 20%;">
+    <div class="title_text">
+      <p>CONTACT US</p>
+      <h3>Visit Our Website Today</h3>
+    </div>
+    <div class="footer_row">
+      <div class="footer_left">
+        <h1>Working Hours</h1>
+        <p><i class="fas fa-clock"></i>Monday to Friday- 10:00 am to 10:00 pm</p>
+        <p><i class="fas fa-clock"></i>Saturday and Sunday - 11:00 am to 11:00 pm</p>
+      </div>
+      <div class="footer_right">
+        <h1>Get In Touch</h1>
+        <p>kaviyagopinath30@gmail.com<i class="fas fa-paper-plane"></i></p>
+        <p>TamilNadu<i class="fas fa-map-marker-alt"></i></p>
+        <p>+91 6383820426<i class="fas fa-phone"></i></p>
+      </div>
+    </div> -->
+    <section id="footer">
+      <div class="title_text">
+        <p><strong style="font-size:larger;">CONTACT US</strong></p><br><br>
+        <h1><strong>Visit Our Website Today</strong></h1>
+      </div>
+    
+      <div class="footer_row">
+       <div class="footer_left">
+         <h1 style="font-size: 30PX;">Working Hours</h1>
+         <p style="color:rgb(226, 32, 226); font-size: 17PX;" ><i class="fas fa-clock"></i> Monday to Friday - 6:00 am to 10:00 pm</p>
+         <p style="color:rgb(226, 32, 226);font-size: 17PX; "><i class="fas fa-clock"></i> Saturday and Sunday - 6:00 am to 12:00 pm</p>
+       </div>
+     
+       <div class="footer_right">
+         <h1 style="font-size: 30PX;">Get In Touch</h1>
+         
+         <a href="mailto:kaviyagopinath30@gmail.com" style="color: rgb(240, 156, 31); text-decoration: none;font-size: 17PX;">
+           kaviyagopinath30@gmail.com <i class="fas fa-envelope" style="color:rgb(240, 156, 31); font-size: 20PX;"></i> 
+         </a><br>
+         
+         <p>
+           <a href="https://www.google.com/maps/place/Tamil+Nadu" target="_blank" style="color: rgb(14, 70, 238); text-decoration: none;font-size: 17PX;">
+             TamilNadu <i class="fas fa-map-marker-alt" style="color: rgb(14, 70, 238);font-size: 20PX;"></i>
+           </a>
+         </p>
+         
+         <p>
+           <a href="tel:+9500567829" style="color:fuchsia; text-decoration: none;font-size: 17PX;">
+             9500567829 <i class="fas fa-phone" style="color:fuchsia;font-size: 20PX;"></i>
+           </a>
+         </p>
+         
+        
+       </div>
+     </div>
+  </section>
+
